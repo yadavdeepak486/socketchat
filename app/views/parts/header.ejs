@@ -1,0 +1,24 @@
+<header>
+  <nav class="navbar components">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a href="/" class="chip" style="    color: #9e1111;
+    padding: 16px 47px;
+    font-weight: bold;
+    width: 24rem;">Deepak Designed Chat</a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="chip"><a href="/">Home</a></li>
+        <li class="chip"><a href="/chat">Chat</a></li>
+        <% if(user){ %>
+          <li class="chip"><a href=""><span id="totalOnline" class="badge">0</span> User's Online</a></li>
+          <li class="chip"><a href="#">Hello, <%= user.username %></a></li>
+          <li class="chip"><a href="/user/logout">Logout</a></li>
+          <% } else{ %>
+            <li class="chip"><a href="/user/login">Login</a></li>
+            <li class="chip"><a href="/user/signup">Signup</a></li>
+            <% } %>
+      </ul>
+    </div>
+  </nav>
+</header>
